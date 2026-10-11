@@ -1,0 +1,37 @@
+name: NammaWeb CI
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+    branches: [master]
+  workflow_dispatch:
+
+jobs:
+  test:
+    name: Run Python tests
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+
+      - name: Install test dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install pytest bcrypt==5.0.0 streamlit==1.61.1 SQLAlchemy==2.0.52 langchain-core==1.5.4 langchain-community==0.4.2 langchain-ollama==1.1.0 langchain-huggingface==1.2.2 pypdf==6.15.0 python-dotenv==1.2.2 pydantic-settings==2.15.0
+
+
+      - name: Check Python syntax
+        run: python -m py_compile app.py
+
+      - name: Run tests
+        env:
+          PYTHONPATH: src
+        run: python -m pytest -q
