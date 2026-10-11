@@ -1,0 +1,83 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Virtual environment
+venv/
+.venv/
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+
+# ChromaDB / local vector database
+data/
+chroma_db/
+
+# Uploaded/local documents
+documents/
+
+# Streamlit
+.streamlit/secrets.toml
+
+# IDE
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db
+.vercel
+
+# Test and runtime artifacts
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+*.log
+__pycache__/
+
+# Local databases and generated vector indexes
+*.db
+*.sqlite
+*.sqlite3
+*.faiss
+*.pkl
+test_chroma/
+test_chroma_add/
+test_chroma_lc/
+test_chroma_raw/
+
+# Local development backups
+*.backup
+*.backup_*
+*.before_*
+*.step*.backup
+app_before_*.py
+app_faiss_working_backup.py
+
+# Local secrets and runtime state
+.streamlit/secrets.toml
+
+# Additional local backup files
+*.bak
+*.bak.*
+src/reach/ai/rag/llm_generator_before_192.py
+scripts/evaluate_generation_before_192.py
+scripts/test_rag_service_before_192.py
+scripts/patch_step*.py
+scripts/patch_workspace_app.py
+scripts/verify_step*.py
+
+# Local copies of ignore rules
+.gitignore.*
+
+# Historical development patch scripts
+scripts/patch_*.py
+scripts/verify_*.py
+scripts/*_before_*.py
+
+# Local review backups
+.gitignore.*
