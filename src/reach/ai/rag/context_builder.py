@@ -94,7 +94,7 @@ class ContextBuilder:
                     [
                         f"--- Source {index} ---",
                         f"Page: {page_label}",
-                        f"Content:",
+                        "Content:",
                         text,
                     ]
                 )

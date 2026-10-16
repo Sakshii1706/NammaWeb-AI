@@ -1,20 +1,17 @@
 ﻿from __future__ import annotations
 
-from datetime import datetime, timezone
 
 from sqlalchemy import create_engine, select
 from sqlalchemy.orm import sessionmaker
 
 from reach.db.base import Base
 from reach.db.identity_models import Workspace
-from reach.db.identity_models import User
-from reach.db.campaign_models import Campaign, CampaignRecipient, DeliveryAttempt
 from reach.db.mock_message_models import MockMessageLog
 from reach.campaigns.campaign_service import CampaignService
 from reach.campaigns.compliance_service import ComplianceService
 from reach.campaigns.campaign_execution_service import CampaignExecutionService
 from reach.providers.fake_providers import FakeEmailProvider
-from reach.providers.base import SendRequest, SendResult
+from reach.providers.base import SendResult
 from reach.providers.registry import ProviderRegistry
 
 

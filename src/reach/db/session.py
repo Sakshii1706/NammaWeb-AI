@@ -30,7 +30,7 @@ def init_db() -> None:
     from reach.db import identity_models  # noqa: F401
     from reach.db import models  # noqa: F401
     from reach.db import campaign_models  # noqa: F401
-    from reach.db import compliance_models
+    from reach.db import compliance_models  # noqa: F401
     from reach.db import mock_message_models  # noqa: F401
     from reach.db.base import Base
 
@@ -40,4 +40,3 @@ def init_db() -> None:
     )
 
     Base.metadata.create_all(bind=engine)
-

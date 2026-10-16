@@ -104,18 +104,17 @@ class Workspace(Base):
         cascade="all, delete-orphan",
     )
 
-    campaigns: Mapped[list["Campaign"]] = relationship(
+    campaigns: Mapped[list["Campaign"]] = relationship(  # noqa: F821
         "Campaign",
         back_populates="workspace",
         cascade="all, delete-orphan",
     )
 
-    knowledge_bases: Mapped[list["KnowledgeBase"]] = relationship(
+    knowledge_bases: Mapped[list["KnowledgeBase"]] = relationship(  # noqa: F821
         "KnowledgeBase",
         back_populates="workspace",
         cascade="all, delete-orphan",
     )
-
 
 class Membership(Base):
     __tablename__ = "memberships"

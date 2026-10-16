@@ -6,7 +6,7 @@ from sqlalchemy.orm import Session
 
 from reach.auth.auth_service import AuthService
 from reach.db.base import Base
-from reach.db.identity_models import Membership, User, Workspace
+from reach.db.identity_models import Membership, Workspace
 
 
 def make_test_session(tmp_path) -> tuple[Session, int]:

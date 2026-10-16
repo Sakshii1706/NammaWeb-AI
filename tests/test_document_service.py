@@ -7,7 +7,6 @@ from sqlalchemy.orm import Session
 
 from reach.db.base import Base
 from reach.db.identity_models import Workspace
-from reach.db.models import Document
 from reach.db.document_repository import (
     ACTIVE_STATUS,
     FAILED_STATUS,

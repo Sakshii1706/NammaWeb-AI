@@ -1,6 +1,6 @@
 ﻿from __future__ import annotations
 
-from reach.providers.base import MessageProvider, SendRequest, SendResult
+from reach.providers.base import SendRequest, SendResult
 
 
 class FakeEmailProvider:

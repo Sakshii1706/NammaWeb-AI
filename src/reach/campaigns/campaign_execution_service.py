@@ -3,7 +3,7 @@
 from dataclasses import dataclass
 from datetime import datetime, timezone
 
-from reach.providers.base import MessageProvider, SendRequest
+from reach.providers.base import SendRequest
 from reach.providers.registry import ProviderRegistry
 from reach.campaigns.mock_message_logger import MockMessageLogger
 
